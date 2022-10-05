@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref="stylesheet" href="style.css" type="text/css">
+    <title>Education Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table{
+               transition: all 2s;
+           }
+           table:hover{
+               transform: scale(1.1) translateZ(100px);
+               font: message-box;
+           }
+        #div{
+            background-color: black;
+            width: 100%;
+        }
+        td{
+            text-align: center;
+        }
+        tr{
+            text-align: center;
+        }
+         </style>
+</head>
+<body style="background-image: linear-gradient(black , white ); ;">
+    <div id="header">
+    <div class="container">
+        <nav>
+        <img src="portfolio.jpg" alt="logo" class="logo"> 
+            <ul>
+              <li><a href="index2.html">Home</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="contactme.html">Contact me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="container night-mode-available">
+        <div class="night-mode-button"style="height:500px ;">
+          <input type="checkbox" class="checkbox" id="night-mode">
+          <label for="night-mode" class="label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="blob"></div>
+            </label>
+                <div class="info night1-mode-available"></div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="about-col-2">
+        <div class="tab-titles" style="padding-left: 140px; margin-left: 30px; " >
+            <p class="tab-links active-link" onclick="opentab('School') " style="font-size: 50px ;"><b>School</b></p>
+            <p class="tab-links active-link" onclick="opentab('UG')" style="font-size: 50px ; text-align: center;"><b>College</b></p>
+            </div>
+           <div class="tab-contents active-tab" id="School">
+             <div style="padding-left: 50px;">
+           <table cellspacing="3" border="2" style="width: 70% ; text-align: center; ">
+           <thead>
+           <tr>
+            <th colspan="2"> GOODLEY PUBLIC SCHOOL </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <th colspan="1">CBSE Board</th>
+                <th colspan="1">Marks</th>
+            </tr>
+            <tr>
+                <td>Class 10<sup>th</sup>(2018)</td>
+                <td> 85% </td>
+            </tr>
+            <tr> 
+                <td> Class 12<sup>th</sup> (2020)</td>
+                <td> 75% </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+    <div class="tab-contents" id="UG">
+      <div style="padding-left: 50px; padding-bottom: 3px;">
+       <table cellspacing="3" border="2" style="width: 70%;"> 
+        <tr>
+           <th colspan="3">CHITKARA UNIVERSITY </th>
+        </tr>   
+        <tr>
+        <th colspan="3">Undergraduate Degree </th>
+        </tr>
+        <tr>
+            <td>B.E(CSE)</td>
+            <td>1st year </td>
+            <td>10 CGPA</td>
+        </tr>
+        <tr>
+            <td>B.E(CSE)</td>
+            <td>2nd year </td>
+            <td>10 CGPA</td>
+        </tr>
+        <tr>
+            <td>B.E(CSE)</td>
+            <td>3rd year </td>
+            <td>9.8 CGPA</td>
+        </tr>
+        <tr>
+            <td >B.E(CSE)</td>
+            <td>4th year </td>
+            <td>9.8 CGPA</td>
+        </tr>
+    
+     </table>
+    </div>
+   </div>
+</div>
+     <script>
+        var tablinks= document.getElementsByClassName("tab-links")
+var tabcontents= document.getElementsByClassName("tab-contents")
+function opentab(tabname){
+  for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+     </script>
+    </div>
+</div>
+   
+  <script type="text/javascript">
+    document.querySelector('.checkbox').addEventListener('change',()=>{
+      document.querySelectorAll('.night-mode-available').forEach(ele=>{
+        ele.classList.toggle('night');
+      })
+    });
+  </script>
+</body>
+</html>

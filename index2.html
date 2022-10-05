@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/784077be0f.js" crossorigin="anonymous"></script>
+  <title>Portfolio</title>
+</head>
+<body id="body">
+  <div id="header">
+    <div class="container">
+      <nav>
+      <img src="portfolio.jpg" alt="logo" class="logo"> 
+        <ul>
+          <li><a href="index2.html">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="contactme.html">Contact me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="container night-mode-available">
+    <div class="night-mode-button">
+      <input type="checkbox" class="checkbox" id="night-mode">
+      <label for="night-mode" class="label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="blob"></div>
+        </label>
+            <div class="info night-mode-available"></div>
+       <table cellspacing="20" id="table" >
+        <div>
+          <tr>
+              <td style="padding-left:80px ;">
+                <h1 id="h1">PRATHAM GARG</h1>
+                <p> <em> Founder and CEO of <strong> AP ENTERPRISES</strong></em></p>
+              </td>
+              <td style="padding-left: 180px ;" >
+                <img id="Animation" src="pic.jpg">
+               </td>
+            </tr>
+        </div>
+        </table>
+        <br>
+        <br>
+        <br>
+    <hr>
+    <!-- About -->
+    <div id="about">
+       <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="user.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>My Name is <strong> Pratham </strong> and I am persuing my Bachelor's of Engineering Computer Science department from <strong>CHITKARA UNIVERSITY.</strong> 3💫 in <strong>Codechef</strong> as well as Certified Web Developer.Love to discover and explore new things. 
+              Right now Exploring my potential.</p>
+            <div class="tab-titles">
+             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+             <p class="tab-links active-link" onclick="opentab('hobbies')">Hobbies</p>
+             </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br>HTML/CSS</li>
+                <li><span>Advance Web Development</span><br>React JS</li>
+                <li><span>DATA STRUCTURE</span><br>PYTHON/JAVA/C++</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="hobbies">
+              <ul>
+                <li><span>Painting</span><br>Portraits</li>
+                <li><span>Reading/Writing</span><br>Novels , Holy Books</li>
+                <li><span>Football</span><br>GoalKeeper</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+    <hr>
+    <!-- ------------------------------------------services------------------------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa fa-code"></i>
+            <h2>Web Design</h2>
+            <p>fnjsgjdif fjnlksdfkl jkfnrklrejs jkenlk kjrenjgntrsj jkernjler jkrnelf kjgrkl jvenelkm kjrenlk kejenlkm krwjnljm jkwmsk
+              jdfvlksmfdlk jrklfkg;dlf ermwklsk;lkl vlremkfk; lkvwmk
+            </p>
+            <a href="">Learn more</a>
+          </div>
+          <div>
+            <i class="fas fa-crop-alt"></i>
+            <h2>UI/UX Design</h2>
+            <p>fnjsgjdif fjnlksdfkl jkfnrklrejs jkenlk kjrenjgntrsj jkernjler jkrnelf kjgrkl jvenelkm kjrenlk kejenlkm krwjnljm jkwmsk
+              jdfvlksmfdlk jrklfkg;dlf ermwklsk;lkl vlremkfk; lkvwmk
+            </p>
+            <a href="">Learn more</a>
+          </div>
+          <div>
+            <i class="fab fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>fnjsgjdif fjnlksdfkl jkfnrklrejs jkenlk kjrenjgntrsj jkernjler jkrnelf kjgrkl jvenelkm kjrenlk kejenlkm krwjnljm jkwmsk
+              jdfvlksmfdlk jrklfkg;dlf ermwklsk;lkl vlremkfk; lkvwmk
+            </p>
+            <a href="">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------------------------Script of Red bar-------------------------------------------------  -->
+    <script>
+      var tablinks= document.getElementsByClassName("tab-links")
+      var tabcontents= document.getElementsByClassName("tab-contents")
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+      </div>
+    </div>
+    <!-- --------------------------------------------script of Toggle----------------------------------------------------- -->
+  <script type="text/javascript">
+    document.querySelector('.checkbox').addEventListener('change',()=>{
+      document.querySelectorAll('.night-mode-available').forEach(ele=>{
+        ele.classList.toggle('night');
+      })
+    });
+  </script>
+</body>
+</html>

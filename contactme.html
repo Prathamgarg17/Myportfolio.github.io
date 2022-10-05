@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact ME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: linear-gradient(black , white );">
+  <div id="header">
+    <div class="container">
+          <nav>
+            <img src="portfolio.jpg" alt="logo" class="logo"> 
+            <ul>
+              <li><a href="index2.html">Home</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="contactme.html">Contact me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="container night-mode-available">
+        <input type="checkbox" class="checkbox" id="night-mode">
+        <label for="night-mode" class="label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="blob"></div>
+        </label>
+    <h1 style="font-family: 'Courgette', cursive; text-align: center; font-size: 50px; font-weight: 800;">CONTACT ME </h1>
+    <table>
+      <tr>
+        <td style="padding-left: 250px;">
+          <div  class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="prathamgarg" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/prathamgarg?trk=profile-badge"></a></div>
+         </td>
+          <td>
+      <div class="QR"> 
+        <img src="WhatsAppQR.png" alt="">
+      </div>
+      </td>
+    </div>
+    </tr>
+    </table>  
+    <label id="label" >if You Want to Drop Valuable Comment Viva mail?</label>
+    <br>
+    <button id="myBtn" style="text-align: center;">Contact</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+       <form id="form"action="mailto:prathamgargji2002@gmail.com" method="post" enctype="text/plain" style="border: 20px;">
+    <h1 style=" text-align: center; color: black; font-size: 30px; font-weight: 500"  ><b>CONTACT FORM</b></h1>
+    <div style="color: black;">
+      <label  >Your Name:</label>
+      <input type="text" name="yourName" value="" placeholder="Name">
+      <br>
+      <br>
+      <label>Email ID :</label>
+      <input type="email" name="yourEmail" value="">
+      <br>
+      <br>
+      <br>
+      <label>Your Message</label><br>
+      <br>
+      <textarea name="yourMessage" id="" cols="30" rows="10"></textarea>
+      <br>
+      <button id="myBtn" type="submit" name="" > Submit </button>
+      <br>
+      </div>
+    </div>
+     </div>
+    </div>
+    </form>
+  </div>
+    
+</div>
+<div style=" padding-top:70px ; text-align: center; background-color: azure;">
+    <a href="https://www.instagram.com/prathamm_x/"><img id="img1" src="Instagram.png"></a>
+    <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/prathamgarg?trk=profile-badge" ><img id="img1" src="Linkedin.png"></a>
+    <a href="https://wa.me/919311418481?"><img id="img1" src="whatsapp.png"></a>
+</div>
+    <script src="index.js"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script type="text/javascript">
+    document.querySelector('.checkbox').addEventListener('change',()=>{
+      document.querySelectorAll('.night-mode-available').forEach(ele=>{
+        ele.classList.toggle('night');
+      })
+    });
+  </script>
+</body>
+</html>
